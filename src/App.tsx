@@ -15,7 +15,6 @@ const App = () => {
         fov: 60,
         far: 200,
         near: 1,
-        zoom: 10,
       }}
       shadows
     >
