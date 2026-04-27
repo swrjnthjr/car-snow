@@ -13,9 +13,12 @@ const App = () => {
       camera={{
         position: [0, 5, 10],
         fov: 60,
+        far: 200,
+        near: 1,
       }}
       shadows
     >
+      <fog attach="fog" args={["#b5bfc5", 1, 80]} />
       <Sky />
       <Road />
       <Car />

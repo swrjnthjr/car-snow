@@ -105,10 +105,10 @@ export function CarScene(props: any) {
           geometry={nodes.glass_03_glass_0.geometry}
           material={materials.glass}
         />
-        <mesh
+        {/* <mesh
           geometry={nodes.glass_03_body_0.geometry}
           material={materials.body}
-        />
+        /> */}
       </group>
       {/* <group
         position={[34.563, 137.34, 11.035]}

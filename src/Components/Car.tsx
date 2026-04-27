@@ -2,7 +2,7 @@ import { CarScene } from "../Car_scene";
 
 const Car = () => {
   return (
-    <group position={[1, 0, 0]}>
+    <group position={[1, 0.1, 0]}>
       {/* <primitive
         object={clonedScene}
         scale={[0.01, 0.01, 0.01]}
@@ -16,6 +16,7 @@ const Car = () => {
         castShadow
         receiveShadow
       />
+      <pointLight color={"red"} intensity={50} />
     </group>
   );
 };

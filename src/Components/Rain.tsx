@@ -10,7 +10,7 @@ const Rain = () => {
     if (!rainRef.current) return;
 
     const rainGeometry = new THREE.BufferGeometry();
-    const rainCount = 50000;
+    const rainCount = 10000;
     const positions = new Float32Array(rainCount * 3);
 
     for (let i = 0; i < rainCount * 3; i += 3) {
@@ -45,11 +45,14 @@ const Rain = () => {
     const positions = positionAttribute.array as Float32Array;
 
     for (let i = 0; i < positions.length; i += 3) {
-      positions[i + 1] -= 1; // Make rain fall
+      positions[i + 1] -= 0.8; // Make rain fall
 
-      // Reset rain to top when it falls below camera
-      if (positions[i + 1] < camera.position.y - 50) {
+      // Destroy particle when it reaches ground (y = 0)
+      if (positions[i + 1] < 0) {
+        // Move particle far away instead of destroying
+        positions[i] = (Math.random() - 0.5) * 200;
         positions[i + 1] = camera.position.y + 50;
+        positions[i + 2] = (Math.random() - 0.5) * 200;
       }
     }
 
