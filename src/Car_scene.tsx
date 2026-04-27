@@ -105,12 +105,12 @@ export function CarScene(props: any) {
           geometry={nodes.glass_03_glass_0.geometry}
           material={materials.glass}
         />
-        {/* <mesh
+        <mesh
           geometry={nodes.glass_03_body_0.geometry}
           material={materials.body}
-        /> */}
+        />
       </group>
-      {/* <group
+      <group
         position={[34.563, 137.34, 11.035]}
         rotation={[-Math.PI / 2, 0, 0]}
       >
@@ -125,7 +125,7 @@ export function CarScene(props: any) {
           geometry={nodes.chest_base_chest_0.geometry}
           material={materials.chest}
         />
-      </group> */}
+      </group>
       {/* <group
         position={[54.766, -2.068, -284.313]}
         rotation={[-Math.PI / 2, 0, 0]}

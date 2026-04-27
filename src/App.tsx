@@ -15,6 +15,7 @@ const App = () => {
         fov: 60,
         far: 200,
         near: 1,
+        zoom: 10,
       }}
       shadows
     >
@@ -24,7 +25,11 @@ const App = () => {
       <Car />
       <Lights />
       <Rain />
-      <OrbitControls />
+      <OrbitControls
+        minDistance={8}
+        maxDistance={80}
+        maxPolarAngle={Math.PI / 2.2}
+      />
       <Ground />
     </Canvas>
   );
