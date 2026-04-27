@@ -1,0 +1,30 @@
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import Ground from "./Components/Ground";
+import Road from "./Components/Road";
+import Sky from "./Components/Sky";
+import Lights from "./Lights";
+import Car from "./Components/Car";
+import Rain from "./Components/Rain";
+
+const App = () => {
+  return (
+    <Canvas
+      camera={{
+        position: [0, 5, 10],
+        fov: 60,
+      }}
+      shadows
+    >
+      <Sky />
+      <Road />
+      <Car />
+      <Lights />
+      <Rain />
+      <OrbitControls />
+      <Ground />
+    </Canvas>
+  );
+};
+
+export default App;
