@@ -9,8 +9,8 @@ Title: Car Scene
 
 import { useGLTF } from "@react-three/drei";
 
-export function CarScene(props) {
-  const { nodes, materials } = useGLTF("/car_scene.glb");
+export function CarScene(props: any) {
+  const { nodes, materials } = useGLTF("/car-snow/car_scene.glb") as any;
   return (
     <group {...props} dispose={null}>
       <group position={[40.507, 74.477, 0]} rotation={[-Math.PI / 2, 0, 0]}>
@@ -302,4 +302,4 @@ export function CarScene(props) {
   );
 }
 
-// useGLTF.preload("/car_scene.glb");
+// useGLTF.preload("/car-snow/car_scene.glb");

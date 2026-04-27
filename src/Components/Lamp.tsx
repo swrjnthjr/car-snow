@@ -2,7 +2,7 @@ import { useGLTF } from "@react-three/drei";
 import { useMemo } from "react";
 
 const Lamp = ({ lampPositionRight }: { lampPositionRight?: boolean }) => {
-  const { scene } = useGLTF("/scifi_lamp.glb");
+  const { scene } = useGLTF("/car-snow/scifi_lamp.glb");
   const clonedScene = useMemo(() => scene.clone(), [scene]);
 
   const lampSize = {
